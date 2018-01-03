@@ -4,15 +4,22 @@ import { Component, OnInit } from '@angular/core';
   // selector: '[app-servers]', // Atribute selector(selecting by html element atribute)
   // selector: '.app-servers', // selecting by html class atribute, sidenote selecting by ID isn't suported by Angular
   selector: 'app-servers', 
-  template: `
-    <app-server></app-server>
-    <app-server></app-server>
-  `,
+  // template: `
+  //   <app-server></app-server>
+  //   <app-server></app-server>
+  // `,
+  templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
 
-  constructor() { }
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit() {
   }
