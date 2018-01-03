@@ -1,0 +1,12 @@
+<button 
+  class="btn btn-success"
+  (click)="showDetails()"
+  >Display Details
+</button>
+<p *ngIf="show">Secret password = 'tuna'</p>
+<div 
+  *ngFor="let click of numberOfClicks"
+  [ngStyle] = "{backgroundColor: click >= 5 ? 'blue' : 'white'}"
+  [ngClass] = "{'white-text': click >= 5}"
+  >{{ click }}
+</div>
