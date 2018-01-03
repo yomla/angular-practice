@@ -12,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class AssignmentComponent implements OnInit {
 
   show = false;
-  numberOfClicks = [];
+  log = [];
   
   constructor() { }
 
@@ -21,6 +21,8 @@ export class AssignmentComponent implements OnInit {
 
   showDetails() {
     this.show = !this.show;
-    this.numberOfClicks.push(this.numberOfClicks.length + 1);
+    // this.numberOfClicks.push(this.numberOfClicks.length + 1);
+    this.log.push(new Date());
+    
   }
 }
